@@ -21,7 +21,7 @@ converte-horas -h "12:30"
 ```bash
 hora: "12.5"
 ```
-![IMG](./docs/img/image.png)
+![IMG](./docs/assets/img/image.png)
 
 * Horas semanais: {[seg, nm, 9],[ter, nm, 9],[qua, nm, 9],[qui, nm, 9],[sex, nm, 9]} = Total 44 horas semanais
 ```bash

@@ -1,0 +1,16 @@
+site_name: Conversor Horas De Trabalho
+repo_url: https://github.com/ogabrielnadai/conversor-horas-trabalho
+repo_name: ogabrielnadai/conversor-horas-trabalho
+edit_uri: tree/main/docs
+
+theme:
+  name: material
+  language: pt-BR
+  logo: assets/logo.png
+  favicon: assets/logo.png
+
+markdown_extensions:
+  - attr_list
+
+extra_css:
+  - stylesheets/extra.css
