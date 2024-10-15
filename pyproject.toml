@@ -5,6 +5,9 @@ description = ""
 authors = ["Gabriel Nadai <denadai123@gmail.com>"]
 readme = "README.md"
 
+[tool.poetry.scripts]
+converte_hora = 'conversor_horas_trabalho.cli'
+
 [tool.poetry.dependencies]
 python = "^3.10"
 typer = "^0.12.5"
