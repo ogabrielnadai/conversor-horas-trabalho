@@ -56,7 +56,7 @@ def test_converte_horas_deve_retornar_erro_dizendo_horas_menos_5_characteres():
 
 @mark.parametrize(
     'horas,esperado',
-    [('12:05', '12.10'), ('12:10', '12.15'), ('12:20', '12.35')],
+    [('12:05', '12.10'), ('12:10', '12.15'), ('12:60', '13.00')],
 )
 def test_converte_horas_deve_retornar_horas_convertidas_um_ponto_correto(
     horas, esperado
@@ -68,7 +68,7 @@ def test_converte_horas_deve_retornar_horas_convertidas_um_ponto_correto(
 
 @mark.parametrize(
     'horas,esperado',
-    [('12.10', '12:05'), ('12.20', '12:10'), ('12.30', '12:20')],
+    [('12.10', '12:05'), ('12.20', '12:10'), ('12.99', '13:00')],
 )
 def test_converte_horas_deve_retornar_horas_convertidas_dois_pontos_correto(
     horas, esperado
