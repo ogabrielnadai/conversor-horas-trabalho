@@ -3,7 +3,7 @@ def converte_horas(hr_recebida: str) -> dict[str, list[str]] | None:
     Recebe uma Hora e modifica para outro sistema
 
     Args:
-        hr_recebida: hr_recebida no formato ex: 12:30 ou 12.50
+        hr_recebida: hora no formato ex: 12:30 ou 12.50
 
     Examples:
         >>> converte_horas('12:30')
@@ -33,7 +33,7 @@ def converte_horas(hr_recebida: str) -> dict[str, list[str]] | None:
         if f'{minutos_int_show:02d}' == '100':
             hora_int = hora_int + 1
             minutos_int_show = 00
-        temp.append(f'{hora_int}.{minutos_int_show:02d}')
+        temp.append(f'{hora_int:02d}.{minutos_int_show:02d}')
     elif '.' in hr_recebida:
         hora_total_float = float(hr_recebida)
         hora_int = int(hora_total_float)
@@ -43,7 +43,7 @@ def converte_horas(hr_recebida: str) -> dict[str, list[str]] | None:
         if f'{minutos_int_show:02d}' == '60':
             hora_int = hora_int + 1
             minutos_int_show = 00
-        temp.append(f'{hora_int}:{minutos_int_show:02d}')
+        temp.append(f'{hora_int:02d}:{minutos_int_show:02d}')
     else:
         raise ValueError(f'Hora invalida, tente neste formato 12:30 ou 12.50')
 
