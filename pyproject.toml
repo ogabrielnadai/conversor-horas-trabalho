@@ -6,7 +6,7 @@ authors = ["Gabriel Nadai <denadai123@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.scripts]
-converte_hora = 'conversor_horas_trabalho.cli'
+converte-hora-trabalho = 'conversor_horas_trabalho.cli:app'
 
 [tool.poetry.dependencies]
 python = "^3.10"
