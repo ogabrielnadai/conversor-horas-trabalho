@@ -1,4 +1,10 @@
+<img src='https://conversor-horas-trabalho.readthedocs.io/pt-br/latest/assets/logo.png' width='200'>
+
 # Conversor Horas Trabalho
+
+[![Documentation Status](https://readthedocs.org/projects/conversor-horas-trabalho/badge/?version=latest)](https://conversor-horas-trabalho.readthedocs.io/pt-br/latest/?badge=latest)
+[![codecov](https://codecov.io/gh/ogabrielnadai/conversor-horas-trabalho/graph/badge.svg?token=8ECGQPT1O4)](https://codecov.io/gh/ogabrielnadai/conversor-horas-trabalho)
+![CI](https://github.com/ogabrielnadai/conversor-horas-trabalho/actions/workflows/pipeline.yml/badge.svg)
 
 O Conversor de horas de trabalho é um CLI responsável por fazer algumas conversões
 entre horas para calculo de horas de trabalho.
@@ -11,7 +17,7 @@ Temos tres comandos disponíveis: `converte-hora`, `converte-hora-semanal` e `to
 ### Converte Horas
 Você pode chamar o conversor de hora via linha de comando. Por exemplo:
 ```bash
-poetry run conversor-hora-trabalho converte-hora
+conversor-hora-trabalho converte-hora
 ```
 ```bash
 ┏━━━━━━━┓
@@ -27,7 +33,7 @@ Voce pode usar passando um horário contendo ":" ou "."
 Todos os tipos de conversoes possiveis:
 * Tipos de Horas: '12:50' ou '12.30' sendo as duas correspondentes. Por exemplo:
 ```bash
-poetry poetry run conversor-hora-trabalho converte-hora 12:40
+poetry conversor-hora-trabalho converte-hora 12:40
 ```
 ```
 ┏━━━━━━━┓
@@ -38,7 +44,7 @@ poetry poetry run conversor-hora-trabalho converte-hora 12:40
 ```
 Ou no outro formato. Por exemplo:
 ```bash
-poetry poetry run conversor-hora-trabalho converte-hora 12.30
+poetry conversor-hora-trabalho converte-hora 12.30
 ```
 ```
 ┏━━━━━━━┓
@@ -50,7 +56,7 @@ poetry poetry run conversor-hora-trabalho converte-hora 12.30
 ## Converte horas semanal
 Você pode chamar o conversor de hora via linha de comando. Por exemplo:
 ```bash
-poetry run conversor-hora-trabalho converte-hora-semanal
+conversor-hora-trabalho converte-hora-semanal
 ```
 ```bash
 ┏━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━┓
@@ -63,7 +69,7 @@ poetry run conversor-hora-trabalho converte-hora-semanal
 ### Contabilizando as horas com comando
 Como você pode chamar o conversor de hora semanal via linha de comando. Por exemplo:
 ```bash
-poetry run conversor-hora-trabalho converte-hora-semanal --help
+conversor-hora-trabalho converte-hora-semanal --help
 ```
 #### Informações sobre o comando converte-hora-semanal
 Para você descobrir outras opções você pode usar a flag `--help`
@@ -100,7 +106,7 @@ e `2 para real`.
 └───────────────────────┴───────────────────┴───────────────────────┘
 ```
 ```bash
-poetry run conversor-hora-trabalho converte-hora-semanal nm09.00,ov09.00 2
+conversor-hora-trabalho converte-hora-semanal nm09.00,ov09.00 2
 ```
 
 ```bash
@@ -112,7 +118,7 @@ poetry run conversor-hora-trabalho converte-hora-semanal nm09.00,ov09.00 2
 ```
 
 ```bash
-poetry run conversor-hora-trabalho converte-hora-semanal nm09.00,nm09.00,nm09.00,nm09.00,nm08.00 1
+conversor-hora-trabalho converte-hora-semanal nm09.00,nm09.00,nm09.00,nm09.00,nm08.00 1
 ```
 
 ```bash
@@ -124,7 +130,7 @@ poetry run conversor-hora-trabalho converte-hora-semanal nm09.00,nm09.00,nm09.00
 ```
 
 ```bash
-poetry run conversor-hora-trabalho converte-hora-semanal nm05.00,ov02.00,nm09.00,nm09.00,nm09.00 1
+conversor-hora-trabalho converte-hora-semanal nm05.00,ov02.00,nm09.00,nm09.00,nm09.00 1
 ```
 
 ```bash
@@ -137,7 +143,7 @@ poetry run conversor-hora-trabalho converte-hora-semanal nm05.00,ov02.00,nm09.00
 ## Total Horas Mensal
 Você pode chamar o total horas mes via linha de comando. Por exemplo:
 ```bash
-poetry run conversor-hora-trabalho total-horas-mes
+conversor-hora-trabalho total-horas-mes
 ```
 ```bash
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━┓
@@ -172,7 +178,7 @@ ou seja podemos colocar o total de horas daquela semana seguido de uma virgula, 
 Exemplo de Uso:
 
 ```bash
-poetry run conversor-hora-trabalho total-horas-mes 44,43,45,44 2024 05
+conversor-hora-trabalho total-horas-mes 44,43,45,44 2024 05
 ```
 ```bash
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━┓
