@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "conversor-horas-trabalho"
-version = "0.1.0"
+version = "0.1.1"
 description = ""
 authors = ["Gabriel Nadai <denadai123@gmail.com>"]
 readme = "README.md"
@@ -15,7 +15,7 @@ classifiers = [
 ]
 
 [tool.poetry.urls]
-"Documentação" = "https://conversor-horas-trabalho.readthedocs.io/en/latest/"
+"Documentação" = "https://conversor-horas-trabalho.readthedocs.io/pt-br/latest/"
 "Código" = "https://github.com/ogabrielnadai/conversor-horas-trabalho"
 "Bug Tracker" = "https://github.com/ogabrielnadai/conversor-horas-trabalho/issues"
 
