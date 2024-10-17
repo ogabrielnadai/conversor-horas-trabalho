@@ -6,6 +6,9 @@ from conversor_horas_trabalho.converte_horas import converte_horas
 from conversor_horas_trabalho.converte_horas_semanais import (
     converte_horas_semanais,
 )
+from conversor_horas_trabalho.total_horas_mes import (
+    total_horas_mes as _total_horas_mes,
+)
 
 console = Console()
 app = Typer()
@@ -47,6 +50,34 @@ def converte_hora_semanal(
     table.add_row(
         total_horas['total_horas_da_semana'],
         total_horas['total_horas_extra'],
+        total_horas['total_horas_faltantes'],
+    )
+
+    console.print(table)
+
+
+@app.command()
+def total_horas_mes(
+    horas_semana: str = Argument(
+        '44,44,44,44', help='Horas totais de cada semana seguido de virgula'
+    ),
+    ano: int = Argument('2024', help='Digite o Ano que deseja calcular'),
+    mes: int = Argument('09', help='Digite o Mes que deseja calcular'),
+):
+    table = Table()
+    total_horas_mes = []
+    total_horas_mes_split = horas_semana.split(',')
+    for hr in enumerate(total_horas_mes_split):
+        total_horas_mes_split[hr[0]] = int(hr[1])
+
+    total_horas = _total_horas_mes(total_horas_mes_split, ano, mes)
+
+    table.add_column('total_de_horas_esperadas_no_mes')
+    table.add_column('total_horas_trabalhadas')
+    table.add_column('total_horas_faltantes')
+    table.add_row(
+        total_horas['total_de_horas_esperadas_no_mes'],
+        total_horas['total_horas_trabalhadas'],
         total_horas['total_horas_faltantes'],
     )
 

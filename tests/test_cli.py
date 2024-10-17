@@ -38,3 +38,18 @@ def test_converte_hora_semanal_cli_deve_conter_as_horas_na_reposta():
     hora = '18:00'
     result = runner.invoke(app, ['converte-hora-semanal'])
     assert hora in result.stdout
+
+
+def test_total_horas_mes_cli_deve_retornar_zero_ao_stdout():
+    result = runner.invoke(app, ['total-horas-mes'])
+    assert result.exit_code == 0
+
+
+def test_total_horas_mes_cli_deve_conter_as_horas_na_resposta():
+    hora = '186:00'
+    hora_trabalhada = '176:00'
+    hora_faltantes = '010:00'
+    result = runner.invoke(app, ['total-horas-mes'])
+    assert hora in result.stdout
+    assert hora_trabalhada in result.stdout
+    assert hora_faltantes in result.stdout
