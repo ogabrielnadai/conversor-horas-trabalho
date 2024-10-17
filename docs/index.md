@@ -14,7 +14,7 @@ Temos dois comandos disponíveis: `converte-hora` e `converte-hora-semanal`
 ### Converte Horas
 Você pode chamar o conversor de hora via linha de comando. Por exemplo:
 ```bash
-poetry run converte-hora-trabalho converte-hora
+poetry run conversor-hora-trabalho converte-hora
 ```
 ```bash
 ┏━━━━━━━┓
@@ -30,7 +30,7 @@ Voce pode usar passando um horário contendo ":" ou "."
 Todos os tipos de conversoes possiveis:
 * Tipos de Horas: '12:50' ou '12.30' sendo as duas correspondentes. Por exemplo:
 ```bash
-poetry poetry run converte-hora-trabalho converte-hora 12:40
+poetry poetry run conversor-hora-trabalho converte-hora 12:40
 ```
 ```
 ┏━━━━━━━┓
@@ -41,7 +41,7 @@ poetry poetry run converte-hora-trabalho converte-hora 12:40
 ```
 Ou no outro formato. Por exemplo:
 ```bash
-poetry poetry run converte-hora-trabalho converte-hora 12.30
+poetry poetry run conversor-hora-trabalho converte-hora 12.30
 ```
 ```
 ┏━━━━━━━┓
@@ -50,10 +50,13 @@ poetry poetry run converte-hora-trabalho converte-hora 12.30
 │ 12:20 │
 └───────┘
 ```
+### Uma tablea mostrando a conversão
+![Logo](assets/img/image.png){ width="500" .center }
+
 ## Converte horas semanal
 Você pode chamar o conversor de hora via linha de comando. Por exemplo:
 ```bash
-poetry run converte-hora-trabalho converte-hora-semanal
+poetry run conversor-hora-trabalho converte-hora-semanal
 ```
 ```bash
 ┏━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━┓
@@ -64,15 +67,15 @@ poetry run converte-hora-trabalho converte-hora-semanal
 ```
 
 ### Contabilizando as horas com comando
-Como você pode chamar o conversor de hora via linha de comando. Por exemplo:
+Como você pode chamar o conversor de hora semanal via linha de comando. Por exemplo:
 ```bash
-poetry run converte-hora-trabalho converte-hora-semanal --help
+poetry run conversor-hora-trabalho converte-hora-semanal --help
 ```
 #### Informações sobre o comando converte-hora-semanal
 Para você descobrir outras opções você pode usar a flag `--help`
 ```
 
- Usage: converte-hora-trabalho converte-hora-semanal
+ Usage: conversor-hora-trabalho converte-hora-semanal
             [OPTIONS] [HORAS_SEMANA] [FORMATO]
 
 ╭─ Arguments ────────────────────────────────────────────────────╮
@@ -103,7 +106,7 @@ e `2 para real`.
 └───────────────────────┴───────────────────┴───────────────────────┘
 ```
 ```bash
-poetry run converte-hora-trabalho converte-hora-semanal nm09.00,ov09.00 2
+poetry run conversor-hora-trabalho converte-hora-semanal nm09.00,ov09.00 2
 ```
 
 ```bash
@@ -115,7 +118,7 @@ poetry run converte-hora-trabalho converte-hora-semanal nm09.00,ov09.00 2
 ```
 
 ```bash
-poetry run converte-hora-trabalho converte-hora-semanal nm09.00,nm09.00,nm09.00,nm09.00,nm08.00 1
+poetry run conversor-hora-trabalho converte-hora-semanal nm09.00,nm09.00,nm09.00,nm09.00,nm08.00 1
 ```
 
 ```bash
@@ -127,7 +130,7 @@ poetry run converte-hora-trabalho converte-hora-semanal nm09.00,nm09.00,nm09.00,
 ```
 
 ```bash
-poetry run converte-hora-trabalho converte-hora-semanal nm05.00,ov02.00,nm09.00,nm09.00,nm09.00 1
+poetry run conversor-hora-trabalho converte-hora-semanal nm05.00,ov02.00,nm09.00,nm09.00,nm09.00 1
 ```
 
 ```bash
@@ -137,11 +140,58 @@ poetry run converte-hora-trabalho converte-hora-semanal nm05.00,ov02.00,nm09.00,
 │ 32:00                 │ 02:00             │ 12:00                 │
 └───────────────────────┴───────────────────┴───────────────────────┘
 ```
+## Total Horas Mensal
+Você pode chamar o total horas mes via linha de comando. Por exemplo:
+```bash
+poetry run conversor-hora-trabalho total-horas-mes
+```
+```bash
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ total_de_horas_esperadas_no_mes ┃ total_horas_trabalhadas ┃ total_horas_faltantes ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━┩
+│ 186:00                          │ 176:00                  │ 010:00                │
+└─────────────────────────────────┴─────────────────────────┴───────────────────────┘
+```
+
+#### Informações sobre o comando total-horas-mes
+Para você descobrir outras opções você pode usar a flag `--help`
+
+```
+ Usage: conversor-hora-trabalho total-horas-mes [OPTIONS] [HORAS_SEMANA] [ANO]
+                                                [MES]
+
+╭─ Arguments ─────────────────────────────────────────────────────────────────────────╮
+│   horas_semana      [HORAS_SEMANA]  Horas totais de cada semana seguido de virgula  │
+│                                     [default: 44,44,44,44]                          │
+│   ano               [ANO]           Digite o Ano que deseja calcular                │
+│                                     [default: 2024]                                 │
+│   mes               [MES]           Digite o Mes que deseja calcular [default: 09]  │
+╰─────────────────────────────────────────────────────────────────────────────────────╯
+╭─ Options ───────────────────────────────────────────────────────────────────────────╮
+│ --help          Show this message and exit.                                         │
+╰─────────────────────────────────────────────────────────────────────────────────────╯
+```
+#### Tags e Uso
+Podemos observar que existem 3 parametros `horas_semana` que é informado em formato csv
+ou seja podemos colocar o total de horas daquela semana seguido de uma virgula, por exemplo,
+`10,10,10`, temos o parametro ano onde indicamos o ano e o ultimo para indicar o mês.
+Exemplo de Uso:
+
+```bash
+poetry run conversor-hora-trabalho total-horas-mes 44,43,45,44 2024 05
+```
+```bash
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ total_de_horas_esperadas_no_mes ┃ total_horas_trabalhadas ┃ total_horas_faltantes ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━┩
+│ 200:00                          │ 176:00                  │ 024:00                │
+└─────────────────────────────────┴─────────────────────────┴───────────────────────┘
+```
 
 ### Mais Informações sobre o CLI
 Para você descobrir outras opções você pode usar a flag `--help`
 ```
- Usage: converte-hora-trabalho [OPTIONS] COMMAND [ARGS]...
+ Usage: conversor-hora-trabalho [OPTIONS] COMMAND [ARGS]...
 
 ╭─ Options ────────────────────────────────────────────────────────────────────╮
 │ --install-completion          Install completion for the current shell.      │
@@ -152,5 +202,6 @@ Para você descobrir outras opções você pode usar a flag `--help`
 ╭─ Commands ───────────────────────────────────────────────────────────────────╮
 │ converte-hora                                                                │
 │ converte-hora-semanal                                                        │
+│ total-horas-mes                                                              │
 ╰──────────────────────────────────────────────────────────────────────────────╯
 ```
