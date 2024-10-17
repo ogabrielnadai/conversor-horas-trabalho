@@ -4,6 +4,7 @@ version = "0.1.0"
 description = ""
 authors = ["Gabriel Nadai <denadai123@gmail.com>"]
 readme = "README.md"
+packages = [{include = conversor_horas_trabalho}]
 
 [tool.poetry.scripts]
 conversor-hora-trabalho = 'conversor_horas_trabalho.cli:app'
@@ -12,7 +13,6 @@ conversor-hora-trabalho = 'conversor_horas_trabalho.cli:app'
 python = "^3.10"
 typer = "^0.12.5"
 rich = "^13.9.2"
-
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.3.3"
