@@ -20,3 +20,10 @@ plugins:
     handlers:
       python:
         paths: [conversor_horas_trabalho]
+
+watch:
+  - conversor_horas_trabalho
+
+extra:
+  commands:
+    run: conversor-horas-trabalho
