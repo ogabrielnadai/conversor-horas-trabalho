@@ -4,6 +4,7 @@ version = "0.1.0"
 description = ""
 authors = ["Gabriel Nadai <denadai123@gmail.com>"]
 readme = "README.md"
+license = "FreeFreeWare"
 packages = [{include = "conversor_horas_trabalho"}]
 classifiers = [
     "Topic :: Education",
