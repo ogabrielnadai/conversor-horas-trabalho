@@ -4,7 +4,19 @@ version = "0.1.0"
 description = ""
 authors = ["Gabriel Nadai <denadai123@gmail.com>"]
 readme = "README.md"
-packages = [{include = conversor_horas_trabalho}]
+packages = [{include = "conversor_horas_trabalho"}]
+classifiers = [
+    "Topic :: Education",
+    "Environment :: Console",
+    "Natural Language :: Portuguese (Brazilian)",
+    "Development Status :: 5 - Production/Stable",
+    "Programming Language :: Python :: 3.10",
+]
+
+[tool.poetry.urls]
+"Documentação" = "https://conversor-horas-trabalho.readthedocs.io/en/latest/"
+"Código" = "https://github.com/ogabrielnadai/conversor-horas-trabalho"
+"Bug Tracker" = "https://github.com/ogabrielnadai/conversor-horas-trabalho/issues"
 
 [tool.poetry.scripts]
 conversor-hora-trabalho = 'conversor_horas_trabalho.cli:app'
