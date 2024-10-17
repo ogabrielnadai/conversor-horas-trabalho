@@ -3,9 +3,7 @@
 O Conversor de horas de trabalho é um CLI responsável por fazer algumas conversões
 entre horas para calculo de horas de trabalho.
 
-Temos dois comandos disponíveis: `converte-hora` e `converte-hora-semanal`
-
-
+Temos tres comandos disponíveis: `converte-hora`, `converte-hora-semanal` e `total-horas-mes` 
 ---
 
 ## Como Usar?
@@ -183,7 +181,7 @@ poetry run conversor-hora-trabalho total-horas-mes 44,43,45,44 2024 05
 │ 200:00                          │ 176:00                  │ 024:00                │
 └─────────────────────────────────┴─────────────────────────┴───────────────────────┘
 ```
-
+---
 ### Mais Informações sobre o CLI
 Para você descobrir outras opções você pode usar a flag `--help`
 ```

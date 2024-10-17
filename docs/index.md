@@ -4,7 +4,7 @@
 O Conversor de horas de trabalho é um CLI responsável por fazer algumas conversões
 entre horas para calculo de horas de trabalho.
 
-Temos dois comandos disponíveis: `converte-hora` e `converte-hora-semanal`
+Temos três comandos disponíveis: `converte-hora`, `converte-hora-semanal` e `total-horas-mes`
 
 
 ---
