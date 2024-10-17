@@ -11,6 +11,8 @@ Temos três comandos disponíveis: `converte-hora`, `converte-hora-semanal` e `t
 
 ## Como Usar?
 
+{% include "templates/instalacao.md" %}
+
 ### Converte Horas
 Você pode chamar o conversor de hora via linha de comando. Por exemplo:
 ```bash
